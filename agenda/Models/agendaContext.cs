@@ -62,8 +62,8 @@ namespace agenda.Models
                     .HasConstraintName("appointments_brokers_FK");
 
                 entity.HasOne(d => d.IdCustomerNavigation)
-                    .WithOne(p => p.Appointment)
-                    .HasForeignKey<Appointment>(d => d.IdCustomer)
+                    .WithMany(p => p.Appointments)
+                    .HasForeignKey(d => d.IdCustomer)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("appointments_customers0_FK");
             });

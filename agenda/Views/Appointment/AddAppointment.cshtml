@@ -1,0 +1,45 @@
+﻿@model Appointment
+@{
+    ViewData["Title"] = "Crée un rendez-vous";
+    IEnumerable<Broker> brokersList = ViewData["brokersList"] as IEnumerable<Broker>;
+    IEnumerable<Customer> customersList = ViewData["customersList"] as IEnumerable<Customer>;
+    string id = ViewData["idBroker"] as string;
+}
+
+<h1> Crée un rendez-vous</h1>   
+<form method="post" asp-route-id=id> 
+    <div asp-validation-summary="All"></div>
+    <div class="form-group p-2">
+        <label asp-for="DateHour" class="control-label"></label>
+        <input asp-for="DateHour" class="form-control" />
+        <span asp-validation-for='DateHour' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2">
+        <label asp-for="Subject" class="control-label"></label>
+        <textarea asp-for="Subject" class="form-control"></textarea>
+        <span asp-validation-for='Subject' class="text-danger"></span>
+    </div>
+    @if (@id=="")
+    {
+        <div class="form-group p-2">
+        <label asp-for="IdBroker"  class="control-label"></label>
+            @Html.DropDownList("Courtier", @brokersList?.Select(r =>
+                        new SelectListItem { Text = $"{r.Lastname}  {r.Firstname}", Value = r.IdBroker.ToString() }), "Courtier", new { @class = "form-control" })
+         <span asp-validation-for='IdBroker' class="text-danger"></span>
+        </div>
+    }
+    
+    <div class="form-group p-2">
+        <label asp-for="IdCustomer" class="control-label"></label>
+        @Html.DropDownList("Client", @customersList?.Select(r =>
+                        new SelectListItem { Text = $"{r.Lastname}  {r.Firstname}", Value = r.IdCustomer.ToString() }), "Client", new { @class = "form-control" })
+         <span asp-validation-for='IdCustomer' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2">
+        <button type="submit" value="Ajouter un courtier" class="btn btn-primary">Ajouter un rendez-vous</button>
+        <a asp-action="Index" asp-controller="Home">Retour</a>
+    </div>
+</form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,36 @@
+﻿@model Broker
+@{
+    ViewData["Title"] = $"Modification du profil {@Model.Lastname}";
+}
+
+<h1> Modification du profil de @Model.Lastname</h1>   
+<form asp-route-id="@Model.IdBroker" method="post"> 
+    <div asp-validation-summary="All"></div>
+    <div class="form-group p-2">
+        <label asp-for="Lastname" class="control-label"></label>
+        <input asp-for="Lastname" class="form-control" />
+        <span asp-validation-for='Lastname' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2">
+        <label asp-for="Firstname" class="control-label"></label>
+        <input asp-for="Firstname" class="form-control"/>
+        <span asp-validation-for='Firstname' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2">
+        <label asp-for="Mail" type ="email" class="control-label"></label>
+        <input asp-for="Mail" class="form-control"/>
+         <span asp-validation-for='Mail' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2">
+        <label asp-for="PhoneNumber" type ="tel" class="control-label"></label>
+        <input asp-for="PhoneNumber" class="form-control"/>
+         <span asp-validation-for='PhoneNumber' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2">
+        <button type="submit" value="Modifier un courtier" class="btn btn-primary">Modifier</button>
+        <a asp-action="Index" asp-controller="Home">Retour</a>
+    </div>
+</form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

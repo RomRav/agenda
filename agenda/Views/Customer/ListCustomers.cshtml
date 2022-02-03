@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Customer>
+@{
+    ViewData["Title"] = "Liste client";
+}
+<div class ="d-flex justify-content-between">
+    <h1>Liste des client : </h1>
+</div>
+<table class="table table-hover" style="width:100%">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.IdCustomer)</th>
+            <th>@Html.DisplayNameFor(model => model.Lastname)</th>
+            <th>@Html.DisplayNameFor(model => model.Firstname)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var broker in Model)
+        {
+            <tr>
+                <td> @broker.IdCustomer</td>
+                <td> @broker.Lastname</td>
+                <td> @broker.Firstname</td>
+                <td>@Html.ActionLink("Detail", "ProfilCustomer", new { id = @broker.IdCustomer })</td>
+                <td class="text-danger">@Html.ActionLink("Supprimez", "DeleteCustomer", new { id = @broker.IdCustomer })</td>  
+            </tr>
+        }
+    </tbody>
+</table>

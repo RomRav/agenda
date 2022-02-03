@@ -15,6 +15,46 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\romain\LaManu\ASP.NET\Projet\4- projet\agenda\agenda
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Appointment/AddAppointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQWRkQXBwb2ludG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Broker/AddBroker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJva2VyXEFkZEJyb2tlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Broker/EditBroker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJva2VyXEVkaXRCcm9rZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Broker/ListBrokers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJva2VyXExpc3RCcm9rZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Broker/ProfilBrokers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJva2VyXFByb2ZpbEJyb2tlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Customer/AddCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQWRkQ3VzdG9tZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Customer/DeleteCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGVsZXRlQ3VzdG9tZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Customer/EditCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRWRpdEN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Customer/ListCustomers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcTGlzdEN1c3RvbWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Customer/ProfilCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcUHJvZmlsQ3VzdG9tZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/romain/LaManu/ASP.NET/Projet/4- projet/agenda/agenda/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

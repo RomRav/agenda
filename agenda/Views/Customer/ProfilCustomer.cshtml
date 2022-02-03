@@ -1,0 +1,29 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Profil du client";
+}
+<div class ="d-flex justify-content-between">
+    <h1>Profil du client : </h1>
+</div>
+<table class="table table-hover" style="width:100%">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.IdCustomer)</th>
+            <th>@Html.DisplayNameFor(model => model.Lastname)</th>
+            <th>@Html.DisplayNameFor(model => model.Firstname)</th>
+            <th>@Html.DisplayNameFor(model => model.Mail)</th>
+            <th>@Html.DisplayNameFor(model => model.PhoneNumber)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>      
+            <tr>
+                <td> @Model.IdCustomer</td>
+                <td> @Model.Lastname</td>
+                <td> @Model.Firstname</td>
+                <td> @Model.Mail</td>
+                <td> @Model.PhoneNumber</td>
+                <td>@Html.ActionLink("Modifier", "EditCustomer", new { id = @Model.IdCustomer })</td>  
+            </tr>
+    </tbody>
+</table>

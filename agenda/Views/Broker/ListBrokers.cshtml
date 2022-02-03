@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Broker>
+@{
+    ViewData["Title"] = "Liste courtiers";
+}
+<div class ="d-flex justify-content-between">
+    <h1>Liste des courtier : </h1>
+</div>
+<table class="table table-hover" style="width:100%">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.IdBroker)</th>
+            <th>@Html.DisplayNameFor(model => model.Lastname)</th>
+            <th>@Html.DisplayNameFor(model => model.Firstname)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var broker in Model)
+        {
+            <tr>
+                <td> @broker.IdBroker</td>
+                <td> @broker.Lastname</td>
+                <td> @broker.Firstname</td>
+                <td>@Html.ActionLink("Detail", "ProfilBrokers", new { id = @broker.IdBroker })</td> 
+                <td>@Html.ActionLink("Ajoutez un rendez-vous", "AddAppointment", "Appointment", new { id = @broker.IdBroker })</td>
+            </tr>
+        }
+    </tbody>
+</table>
