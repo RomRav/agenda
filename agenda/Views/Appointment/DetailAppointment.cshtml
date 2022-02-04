@@ -1,0 +1,62 @@
+﻿@model Appointment
+@{
+    ViewData["Title"] = "Détail du rendez-vous : ";
+}
+<div class ="d-flex justify-content-between">
+    <h1>Détail du rendez-vous : </h1>
+</div>
+<table class="table table-hover table-striped p-2" style="width:100%">
+    <thead>
+        <tr>
+            <th  scope="col">@Html.DisplayNameFor(model => model.IdAppointment)</th>
+            <th  scope="col">@Html.DisplayNameFor(model => model.DateHour)</th>
+            <th  scope="col">@Html.DisplayNameFor(model => model.Subject)</th>
+            <th  scope="col">@Html.DisplayNameFor(model => model.IdCustomer)</th>
+            <th  scope="col">@Html.DisplayNameFor(model => model.IdBroker)</th>
+          
+        </tr>
+    </thead>
+    <tbody>      
+            <tr>
+                <td class="text-center"> @Model.IdAppointment</td>
+                <td class="text-center"> @Model.DateHour</td>
+                <td class="text-center"> @Model.Subject</td>
+                <td>
+                    <table class = "table-primary table-bordered table m-2 table-hover">
+                        <thead>
+                            <th>@Html.DisplayNameFor(model => model.IdCustomerNavigation.Lastname)</th>
+                            <th>@Html.DisplayNameFor(model => model.IdCustomerNavigation.Firstname)</th>
+                            <th>@Html.DisplayNameFor(model => model.IdCustomerNavigation.Mail)</th>
+                            <th>@Html.DisplayNameFor(model => model.IdCustomerNavigation.PhoneNumber)</th>
+                            <th>@Html.DisplayNameFor(model => model.IdCustomerNavigation.Budget)</th>
+                        </thead>
+                        <tr>
+                            <td>@Model.IdCustomerNavigation.Lastname</td>
+                            <td>@Model.IdCustomerNavigation.Firstname</td>
+                            <td>@Model.IdCustomerNavigation.Mail</td>
+                            <td>@Model.IdCustomerNavigation.PhoneNumber</td>
+                            <td>@Model.IdCustomerNavigation.Budget</td>
+                        </tr>
+
+                    </table>
+                </td>
+                <td>
+                    <table class = "table-info table-bordered table m-2 table-hover">
+                        <thead>
+                            <th>@Html.DisplayNameFor(model => model.IdBrokerNavigation.Lastname)</th>
+                            <th>@Html.DisplayNameFor(model => model.IdBrokerNavigation.Firstname)</th>
+                            <th>@Html.DisplayNameFor(model => model.IdBrokerNavigation.Mail)</th>
+                            <th>@Html.DisplayNameFor(model => model.IdBrokerNavigation.PhoneNumber)</th>
+                        </thead>
+                        <tr>
+                            <td>@Model.IdBrokerNavigation.Lastname</td>
+                            <td>@Model.IdBrokerNavigation.Firstname</td>
+                            <td>@Model.IdBrokerNavigation.Mail</td>
+                            <td>@Model.IdBrokerNavigation.PhoneNumber</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+    </tbody>
+</table>
+<a asp-action="Index" asp-controller="Home">Retour</a>

@@ -14,10 +14,10 @@ namespace agenda.Models
         [Key]
         public int IdBroker { get; set; }
         [Required(ErrorMessage = "Veuillez saisir un nom.")]
-        [Display(Name = "Nom")]
+        [Display(Name = "Nom courtier")]
         public string Lastname { get; set; } = null!;
         [Required(ErrorMessage = "Veuillez saisir un prénom.")]
-        [Display(Name = "Prénom")]
+        [Display(Name = "Prénom courtier")]
         public string Firstname { get; set; } = null!;
         [Required(ErrorMessage = "Veuillez saisir un mail.")]
         [Display(Name = "eMail")]

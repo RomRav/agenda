@@ -15,7 +15,8 @@ namespace agenda.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<Appointment> appointments = Appointment.GetTodayAppointmentsList();
+            return View(appointments);
         }
 
         public IActionResult Privacy()

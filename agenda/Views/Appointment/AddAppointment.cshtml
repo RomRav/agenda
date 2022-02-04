@@ -7,7 +7,7 @@
 }
 
 <h1> Crée un rendez-vous</h1>   
-<form method="post" asp-route-id=id> 
+<form method="post" asp-route-id=@Convert.ToInt32(id)> 
     <div asp-validation-summary="All"></div>
     <div class="form-group p-2">
         <label asp-for="DateHour" class="control-label"></label>
@@ -19,7 +19,7 @@
         <textarea asp-for="Subject" class="form-control"></textarea>
         <span asp-validation-for='Subject' class="text-danger"></span>
     </div>
-    @if (@id=="")
+    @if (@id=="0")
     {
         <div class="form-group p-2">
         <label asp-for="IdBroker"  class="control-label"></label>

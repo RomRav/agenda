@@ -13,10 +13,10 @@ namespace agenda.Models
         [Key]
         public int IdCustomer { get; set; }
         [Required(ErrorMessage = "Veuillez saisir un nom.")]
-        [Display(Name = "Nom")]
+        [Display(Name = "Nom client")]
         public string Lastname { get; set; } = null!;
         [Required(ErrorMessage = "Veuillez saisir un prénom.")]
-        [Display(Name = "Prénom")]
+        [Display(Name = "Prénom client")]
         public string Firstname { get; set; } = null!;
         [Required(ErrorMessage = "Veuillez saisir un mail.")]
         [Display(Name = "eMail")]
