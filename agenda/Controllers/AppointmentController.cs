@@ -77,10 +77,29 @@ namespace agenda.Controllers
             Appointment appointment = Appointment.GetAppointmentsById(id);
             return View(appointment);
         }
-        //Renvoie la vue de supprission d'un rendez-vous
+        //Renvoie la vue de suppression d'un rendez-vous
         public IActionResult DeleteAppointment(int id)
         {
-            return View();
+            Appointment appointment = _db.Appointments.Find(id);
+            
+            return View(appointment);
+        }
+        //Supprime le rdv
+        [HttpPost]
+        public IActionResult DeleteAppointment(Appointment toDeleteAppointment, int id)
+        {
+                toDeleteAppointment.IdAppointment = id;
+                _db.Appointments.Remove(toDeleteAppointment);
+                if (_db.SaveChanges() > 0)
+                {
+                    TempData["success"] = "Le rendez-vous a bien été supprimé.";
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    TempData["failure"] = "Une erreur c'est produite.";
+                }     
+            return View(toDeleteAppointment);
         }
 
     }

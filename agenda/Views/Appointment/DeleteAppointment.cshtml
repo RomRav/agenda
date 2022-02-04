@@ -1,0 +1,51 @@
+﻿@model Appointment
+@{
+     ViewData["Title"] = "Supprimez un rendez-vous";
+}
+<h1> Supprimez un rendez-vous</h1>   
+<form method="post"> 
+    <div asp-validation-summary="All"></div>
+    <div class="form-group p-2">
+        <label asp-for="DateHour" class="control-label"></label>
+        <input asp-for="DateHour" class="form-control" />
+        <span asp-validation-for='DateHour' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2">
+        <label asp-for="IdCustomerNavigation" class="control-label"></label>
+        <input asp-for="IdCustomerNavigation" value="@Model.IdCustomer" class="form-control" />
+        <span asp-validation-for='IdCustomerNavigation' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2 hidden">
+        <label asp-for="IdBrokerNavigation" class="control-label"></label>
+        <input asp-for="IdBrokerNavigation" value="@Model.IdBroker" class="form-control" />
+        <span asp-validation-for='IdBrokerNavigation' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2">
+        <label asp-for="IdCustomer" class="control-label"></label>
+        <input asp-for="IdCustomer" value="@Model.IdCustomer" class="form-control" />
+        <span asp-validation-for='IdCustomer' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2 hidden">
+        <label asp-for="IdBroker" class="control-label"></label>
+        <input asp-for="IdBroker" value="@Model.IdBroker" class="form-control" />
+        <span asp-validation-for='IdBroker' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2 hidden">
+        <label asp-for="IdAppointment" class="control-label"></label>
+        <input asp-for="IdAppointment" value="@Model.IdAppointment" class="form-control" />
+        <span asp-validation-for='IdAppointment' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2">
+        <label asp-for="Subject" class="control-label"></label>
+        <textarea asp-for="Subject" class="form-control"></textarea>
+        <span asp-validation-for='Subject' class="text-danger"></span>
+    </div>
+    <div class="form-group p-2">
+        <button type="submit" value="Supprimez ce rendez-vous" class="btn btn-danger">Supprimez ce rendez-vous</button>
+        <a asp-action="Index" asp-controller="Home">Retour</a>
+    </div>
+</form>
+<p>Voulez-vous vraiment supprimer le client?</p>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

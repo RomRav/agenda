@@ -38,12 +38,12 @@ namespace agenda.Controllers
                 }
                 else
                 {
-                    TempData["fail"] = "Une erreur c'est produite.";
+                    TempData["failure"] = "Une erreur c'est produite.";
                 }
             }
             else
             {
-                TempData["fail"] = "Probléme de saisie dans le formulaire.";
+                TempData["failure"] = "Probléme de saisie dans le formulaire.";
                 return View(newCustomer);
             }
             return View(newCustomer);
@@ -85,7 +85,7 @@ namespace agenda.Controllers
                 TempData["success"] = "Le profil a bien été modifié.";
                 return RedirectToAction("ListCustomers");
             }
-            TempData["fail"] = "Une erreur c'est produite lors de la modification du profil.";
+            TempData["failure"] = "Une erreur c'est produite lors de la modification du profil.";
             return View(editCustomer);
         }
         //Appel la vue de confirmation de suupression du client
@@ -110,7 +110,7 @@ namespace agenda.Controllers
                 }
                 else
                 {
-                    TempData["fail"] = "Une erreur c'est produite.";
+                    TempData["failure"] = "Une erreur c'est produite.";
                 }
             }
             return View(toDeletCustomer);
